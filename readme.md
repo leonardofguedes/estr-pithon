@@ -1,13 +1,25 @@
-API-ESTR
+# API-ESTR
 
-Passo 1:
-- baixar bibliotecas do requirements.txt
+### Passo 1:
+- criar pasta no desktop e baixar o código com git bash
+```
+  git clone https://github.com/leonardofguedes/estr-pithon.git
+```
+- Abra o editor no código, crie/ative o ambiente virtual (se desejar) e baixe dependências/bibliotecas do requirements.txt:
+```
+pip install -r requirements.txt
+```
+- Na raiz do projeto, faça rodar o código:
+```
+python app.py
+```
+## Porta:
+### http://localhost:5000/
+### http://localhost:5000/apidocs
 
-Porta:
-localhost/5000
 
 
-
+Explicação de paginação:
 
 Paginação na rota get /empresas:
 Para usar a rota com paginação, limite de itens e ordenação, você precisará adicionar parâmetros à URL da seguinte maneira:
