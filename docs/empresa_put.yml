@@ -1,0 +1,35 @@
+summary: Editar a empresa pelo CNPJ
+parameters:
+  - name: cnpj
+    in: path
+    description: CNPJ da empresa
+    required: true
+    schema:
+      type: string
+  - in: body
+    name: body
+    schema:
+      $ref: '#/definitions/EmpresaEditavel'
+responses:
+  200:
+    description: Os dados da empresa foram atualizados com sucesso.
+    schema:
+      $ref: '#/definitions/EmpresaEditavel'
+  400:
+    description: Atributo não pode ser alterado.
+  404:
+    description: A empresa não foi encontrada.
+definitions:
+  EmpresaEditavel:
+    type: object
+    properties:
+      nome_fantasia:
+        type: string
+        description: Nome fantasia da empresa.
+      cnae:
+        type: string
+        description: CNAE da empresa.
+    required:
+      - nome_fantasia
+      - cnae
+

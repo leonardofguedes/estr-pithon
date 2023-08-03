@@ -1,0 +1,48 @@
+summary: Obter a empresa pelo CNPJ
+parameters:
+  - name: cnpj
+    in: path
+    description: CNPJ da empresa
+    required: true
+    schema:
+      type: string
+responses:
+  200:
+    description: Os dados da empresa foram encontrados com sucesso.
+    schema:
+      $ref: '#/definitions/Empresa'
+  404:
+    description: A empresa não foi encontrada.
+definitions:
+  Empresa:
+    type: object
+    properties:
+      nome_razao:
+        type: string
+        description: Nome razão da empresa.
+      nome_fantasia:
+        type: string
+        description: Nome fantasia da empresa.
+      address:
+        type: string
+        description: Endereço da empresa.
+      city:
+        type: string
+        description: Cidade da empresa.
+      cnae:
+        type: string
+        description: CNAE da empresa.
+      cnpj:
+        type: string
+        description: CNPJ da empresa.
+      uuid:
+        type: string
+        description: UUID da empresa.
+    required:
+      - nome_razao
+      - nome_fantasia
+      - address
+      - city
+      - cnae
+      - cnpj
+      - uuid

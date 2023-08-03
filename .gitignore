@@ -1,0 +1,11 @@
+venv/
+.venv/
+*.pyc
+*~
+*.swp
+*.swo
+*.log
+*.db
+*.sqlite3
+/media/
+local_settings.py

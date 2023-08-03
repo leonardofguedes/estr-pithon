@@ -1,0 +1,13 @@
+summary: Deletar a empresa pelo CNPJ
+parameters:
+  - name: cnpj
+    in: path
+    description: CNPJ da empresa
+    required: true
+    schema:
+      type: string
+responses:
+  200:
+    description: A empresa foi deletada com sucesso.
+  404:
+    description: Não foi possível deletar a empresa.

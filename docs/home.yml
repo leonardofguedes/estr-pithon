@@ -1,0 +1,8 @@
+paths:
+  /:
+    get:
+      summary: Home endpoint
+      description: This is the home endpoint. It returns a string "API-ES".
+      responses:
+        200:
+          description: The string "API-ES" was returned successfully.
